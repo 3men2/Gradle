@@ -1,0 +1,4 @@
+# Ignore this folder
+build/
+.git
+.idea
