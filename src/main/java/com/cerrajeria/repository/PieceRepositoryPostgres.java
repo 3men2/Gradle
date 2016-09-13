@@ -26,8 +26,13 @@ public class PieceRepositoryPostgres implements PieceRepository {
 
     @Override
     public Piece createPiece(Piece piece) {
-        this.entityManager.createQuery("INSERT INTO " Piece.class.getSimpleName() "VALUES ('"piece.getId()', 'piece.getName()', 'piece.getCostprice()', 'piece.getSaleprice()', 'piece.getDistributor())'");
+        //this.entityManager.createQuery("INSERT INTO " Piece.class.getSimpleName() "VALUES ('"piece.getId()', 'piece.getName()', 'piece.getCostprice()', 'piece.getSaleprice()', 'piece.getDistributor())'");
         return piece;
+
+    }
+
+    @Override
+    public void deletePiece(String id) {
 
     }
 

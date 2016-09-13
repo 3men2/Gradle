@@ -1,6 +1,7 @@
 package com.cerrajeria.configuration;
 
 import com.cerrajeria.application.service.CreatePieceUseCase;
+import com.cerrajeria.application.service.DeletePieceUseCase;
 import com.cerrajeria.application.service.FindAllPiecesUseCase;
 import com.cerrajeria.controllers.PieceController;
 import com.cerrajeria.domain.PieceRepository;
@@ -22,13 +23,18 @@ public class PieceConfiguration {
     }
 
     @Bean
-    public PieceRepository pieceRepository(EntityManager entityManager) {
-        return new PieceRepositoryPostgres(entityManager);
+    public CreatePieceUseCase createPieceUseCase(PieceRepository pieceRepository) {
+        return new CreatePieceUseCase(pieceRepository);
     }
 
     @Bean
-    public CreatePieceUseCase createPieceUseCase(PieceRepository pieceRepository) {
-        return new CreatePieceUseCase(pieceRepository);
+    public DeletePieceUseCase deletePieceUseCase(PieceRepository pieceRepository) {
+        return  new DeletePieceUseCase(pieceRepository);
+    }
+
+    @Bean
+    public PieceRepository pieceRepository(EntityManager entityManager) {
+        return new PieceRepositoryPostgres(entityManager);
     }
 
 }

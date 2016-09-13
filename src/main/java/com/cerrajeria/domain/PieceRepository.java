@@ -11,4 +11,6 @@ public interface PieceRepository {
 
     Piece createPiece(Piece piece);
 
+    void deletePiece(String id);
+
 }
