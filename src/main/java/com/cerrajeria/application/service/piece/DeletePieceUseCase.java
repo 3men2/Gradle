@@ -1,11 +1,12 @@
-package com.cerrajeria.application.service;
+package com.cerrajeria.application.service.piece;
 
-import com.cerrajeria.domain.PieceRepository;
+import com.cerrajeria.domain.piece.PieceRepository;
 
 /**
  * Created by Aquilles on 13/09/2016.
  */
 public class DeletePieceUseCase {
+
     private PieceRepository pieceRepository;
 
     public DeletePieceUseCase(PieceRepository pieceRepository) {
@@ -13,6 +14,7 @@ public class DeletePieceUseCase {
     }
 
     public void deletePiece(String id) {
-        this.pieceRepository.deletePiece(id);
+
+        this.pieceRepository.deletePiece(this.pieceRepository.findPieceById(id));
     }
 }

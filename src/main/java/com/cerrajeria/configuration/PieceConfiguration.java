@@ -1,11 +1,8 @@
 package com.cerrajeria.configuration;
 
-import com.cerrajeria.application.service.CreatePieceUseCase;
-import com.cerrajeria.application.service.DeletePieceUseCase;
-import com.cerrajeria.application.service.FindAllPiecesUseCase;
-import com.cerrajeria.controllers.PieceController;
-import com.cerrajeria.domain.PieceRepository;
-import com.cerrajeria.repository.PieceRepositoryPostgres;
+import com.cerrajeria.application.service.piece.*;
+import com.cerrajeria.domain.piece.PieceRepository;
+import com.cerrajeria.repository.postgres.PieceRepositoryPostgres;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -30,6 +27,21 @@ public class PieceConfiguration {
     @Bean
     public DeletePieceUseCase deletePieceUseCase(PieceRepository pieceRepository) {
         return  new DeletePieceUseCase(pieceRepository);
+    }
+
+    @Bean
+    public FindPieceByIdUseCase findPieceByIdUseCase(PieceRepository pieceRepository) {
+        return new FindPieceByIdUseCase(pieceRepository);
+    }
+
+    @Bean
+    public UpdatePieceUseCase updatePieceUseCase(PieceRepository pieceRepository) {
+        return new UpdatePieceUseCase(pieceRepository);
+    }
+
+    @Bean
+    public FindPiecesByNameDistributor findPiecesByNameDistributor(PieceRepository pieceRepository) {
+        return new FindPiecesByNameDistributor(pieceRepository);
     }
 
     @Bean

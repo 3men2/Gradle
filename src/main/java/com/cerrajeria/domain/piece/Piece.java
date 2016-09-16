@@ -1,4 +1,4 @@
-package com.cerrajeria.domain;
+package com.cerrajeria.domain.piece;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

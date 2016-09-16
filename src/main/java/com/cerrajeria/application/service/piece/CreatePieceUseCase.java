@@ -1,7 +1,7 @@
-package com.cerrajeria.application.service;
+package com.cerrajeria.application.service.piece;
 
-import com.cerrajeria.domain.Piece;
-import com.cerrajeria.domain.PieceRepository;
+import com.cerrajeria.domain.piece.Piece;
+import com.cerrajeria.domain.piece.PieceRepository;
 
 /**
  * Created by Aquilles on 12/09/2016.
