@@ -1,6 +1,11 @@
 package com.cerrajeria.configuration;
 
-import com.cerrajeria.application.service.piece.*;
+import com.cerrajeria.application.service.piece.createpieceusecase.CreatePieceUseCase;
+import com.cerrajeria.application.service.piece.deletepieceusecase.DeletePieceUseCase;
+import com.cerrajeria.application.service.piece.findallpiecesusecase.FindAllPiecesUseCase;
+import com.cerrajeria.application.service.piece.findpiecebyidusecase.FindPieceByIdUseCase;
+import com.cerrajeria.application.service.piece.findpiecesbynamedistributor.FindPiecesByNameDistributor;
+import com.cerrajeria.application.service.piece.updatepieceusecase.UpdatePieceUseCase;
 import com.cerrajeria.domain.piece.PieceRepository;
 import com.cerrajeria.repository.postgres.PieceRepositoryPostgres;
 import org.springframework.context.annotation.Bean;

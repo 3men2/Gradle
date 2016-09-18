@@ -1,4 +1,4 @@
-package com.cerrajeria.application.service.piece;
+package com.cerrajeria.application.service.piece.deletepieceusecase;
 
 import com.cerrajeria.domain.piece.PieceRepository;
 

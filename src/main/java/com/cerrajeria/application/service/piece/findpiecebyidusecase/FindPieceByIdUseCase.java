@@ -1,4 +1,4 @@
-package com.cerrajeria.application.service.piece;
+package com.cerrajeria.application.service.piece.findpiecebyidusecase;
 
 import com.cerrajeria.domain.piece.Piece;
 import com.cerrajeria.domain.piece.PieceRepository;
